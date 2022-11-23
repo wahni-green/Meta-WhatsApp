@@ -4,5 +4,6 @@
 # import frappe
 import unittest
 
+
 class TestWhatsAppMessageTemplate(unittest.TestCase):
 	pass

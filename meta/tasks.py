@@ -3,9 +3,9 @@ import re
 
 import frappe
 from frappe import _
-
 from frappe.utils import get_url
-from meta.pdf_utils import *
+
+from meta.pdf_utils import create_folder, get_pdf_data, save_and_attach
 from meta.whatsapp_utils import WhatsAppAPI
 
 
@@ -30,7 +30,6 @@ def send_sales_order_msg(data, doctype, docname):
         file_name = file_ref.file_name
         pdf_url = f"{get_url()}:8002{pdf_link}"
         # pdf_url = get_url(pdf_link)
-        # frappe.throw(str(pdf_url))
 
     components_dict = [
         {

@@ -1,11 +1,10 @@
-import json
 import re
 
 import frappe
 import requests
-from frappe import _
-from frappe.utils import get_url, nowdate
+from frappe.utils import nowdate
 from frappe.utils.password import get_decrypted_password
+
 
 class WhatsAppAPI:
 	def __init__(self):
