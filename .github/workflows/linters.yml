@@ -29,4 +29,3 @@ jobs:
             config: >-
               r/python.lang.correctness
               ./frappe-semgrep-rules/rules
-Footer
