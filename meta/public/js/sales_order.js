@@ -3,7 +3,6 @@
 
 frappe.ui.form.on("Sales Order", {
     refresh: function (frm) {
-        console.log("s0");
         if (!frm.doc.__islocal) {
             frm.add_custom_button(__("Whatsapp Message"), () => {
                 send_sms(frm);
@@ -61,7 +60,8 @@ function send_sms(frm) {
                 args: {
                     "data": values,
                     "doctype": frm.doc.doctype,
-                    "docname": frm.doc.name
+                    "docname": frm.doc.name,
+                    "customer": frm.doc.customer
                 },
                 freeze: true,
                 freeze_message: (__('Sending WhatsApp Message.!!'))

@@ -10,7 +10,7 @@ from meta.whatsapp_utils import WhatsAppAPI
 
 
 @frappe.whitelist()
-def send_sales_order_msg(data, doctype, docname):
+def send_sales_msg(data, doctype, docname, customer):
     if data and isinstance(data, str):
         data = json.loads(data)
     recipient = re.sub("[^0-9]", "", data["recipient"])
@@ -44,8 +44,8 @@ def send_sales_order_msg(data, doctype, docname):
         {
             "type": "body",
             "parameters": [
-                {"type": "text", "text": "Niyz Test"},
-                {"type": "text", "text": "ACC-001"},
+                {"type": "text", "text": customer},
+                {"type": "text", "text": file_name},
             ],
         },
     ]

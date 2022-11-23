@@ -14,7 +14,7 @@ app_license = "GPL v3"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/meta/css/meta.css"
-app_include_js = "/assets/meta/js/toolbar.js"
+# app_include_js = "/assets/meta/js/toolbar.js"
 # include js, css files in header of web template
 # web_include_css = "/assets/meta/css/meta.css"
 # web_include_js = "/assets/meta/js/meta.js"
