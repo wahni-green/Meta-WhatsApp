@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:template",
+ "creation": "2022-11-23 10:34:05.313716",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "template",
+  "template_name",
+  "document",
+  "language_code",
+  "column_break_3",
+  "has_header",
+  "type",
+  "attach",
+  "section_break_5",
+  "parameter"
+ ],
+ "fields": [
+  {
+   "fieldname": "template",
+   "fieldtype": "Data",
+   "label": "Template",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Template Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "language_code",
+   "fieldtype": "Select",
+   "label": "Language Code",
+   "options": "en\nen_US\nen_UK\nml",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_header",
+   "fieldtype": "Check",
+   "label": "Has Header"
+  },
+  {
+   "depends_on": "has_header",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "mandatory_depends_on": "has_header",
+   "options": "\nimage\npdf"
+  },
+  {
+   "depends_on": "has_header",
+   "fieldname": "attach",
+   "fieldtype": "Attach",
+   "label": "Attach"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "parameter",
+   "fieldtype": "Table",
+   "label": "Parameter",
+   "options": "WhatsApp Message Template Item"
+  },
+  {
+   "fieldname": "document",
+   "fieldtype": "Link",
+   "label": "Document",
+   "options": "DocType"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-23 11:17:40.954470",
+ "modified_by": "Administrator",
+ "module": "Meta Integration",
+ "name": "WhatsApp Message Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
