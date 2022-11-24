@@ -26,5 +26,5 @@ def save_and_attach(content, to_doctype, to_name, folder):
     File document is linked to another document.
     """
     file_name = "{}.pdf".format(to_name.replace(" ", "-").replace("/", "-"))
-    file_url = save_file(file_name, content, to_doctype, to_name, folder=folder, is_private=1)
+    file_url = save_file(file_name, content, to_doctype, to_name, folder=folder, is_private=0)
     return file_url
