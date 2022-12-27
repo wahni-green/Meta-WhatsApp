@@ -14,7 +14,7 @@ frappe.ui.form.on("Sales Order", {
 
 function send_sms(frm) {
     let d = new frappe.ui.Dialog({
-        title: __("Whatsapp Invite Link"),
+        title: __("Whatsapp Message"),
         fields: [
             {
                 label: __("To"),
@@ -56,7 +56,7 @@ function send_sms(frm) {
         primary_action_label: __("Send"),
         primary_action(values) {
             frappe.call({
-                method: "meta.tasks.send_sales_order_msg",
+                method: "meta.tasks.send_sales_msg",
                 args: {
                     "data": values,
                     "doctype": frm.doc.doctype,
