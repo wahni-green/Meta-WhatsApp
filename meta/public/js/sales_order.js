@@ -43,6 +43,7 @@ function send_sms(frm) {
                 fieldname: "print_format",
                 options: "Print Format",
                 reqd: 1,
+                default: frm.meta.default_print_format ? frm.meta.default_print_format: "",
                 get_query: function () {
                     return {
                         filters: {

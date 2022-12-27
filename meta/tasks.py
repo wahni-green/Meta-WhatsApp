@@ -42,7 +42,7 @@ def send_sales_msg(data, doctype, docname, customer):
             "type": "body",
             "parameters": [
                 {"type": "text", "text": customer},
-                {"type": "text", "text": file_name},
+                {"type": "text", "text": docname},
             ],
         },
     ]
